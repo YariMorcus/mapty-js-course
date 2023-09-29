@@ -171,9 +171,6 @@ class App {
 
       // Data validation
       if (
-        // !Number.isFinite(distance) ||
-        // !Number.isFinite(duration) ||
-        // !Number.isFinite(cadence)
         !validInputs(distance, duration, cadence) ||
         !allPositive(distance, duration, cadence)
       )
@@ -295,8 +292,6 @@ class App {
         duration: 1,
       },
     });
-
-    // workout.click();
   }
 
   #setLocalStorage() {
@@ -309,7 +304,6 @@ class App {
     if (!data) return;
 
     this.#workouts = data;
-    // console.log(this.#workouts);
 
     // Render workouts in list
     this.#workouts.forEach(workout => {
