@@ -111,10 +111,12 @@ class App {
     this.#map = L.map('map').setView(coords, this.#mapZoomLevel);
 
     L.tileLayer(
-      'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png',
+      'https://{s}.tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=447a33529da1432e9b232137acd3ba3f',
       {
         attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        apikey: '447a33529da1432e9b232137acd3ba3f',
+        maxZoom: 22,
       }
     ).addTo(this.#map);
 
